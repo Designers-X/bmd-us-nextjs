@@ -1,11 +1,9 @@
-
-
 .holder {
     background-color: rgb(0, 0, 0);
     color: white;
     position: fixed;
     width: 100%;
-    height: 370px;
+    height: auto;
     bottom: 0px;
     z-index: 111;
     padding: 0.5rem 2rem;
@@ -16,23 +14,94 @@
     right: 0;
     top: 0;
     z-index: 50;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+    margin: auto;
+}
+.boxHide{
+    display: none;
+    flex: 1 0 100%;
+}
+.boxOne{
+    flex: 1 0 50%;
+}
+.boxTwo{
+    flex: 1 0 25%;
+}
+.boxThree{
+    flex: 1 0 25%;
+}
+.boxFour{
+    flex: 1 0 50%;
+    display: flex;
+    justify-content: center;
+}
+.boxFive{
+    flex: 1 0 25%;
+}
+.boxSix{
+    flex: 1 0 25%;
+}
+.boxSeven{
+    flex: 0 0 75%;
+    display: flex;
+    justify-content: end;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 0;
+.boxEight{
+    flex: 1 0 25%;
+}
+.boxNight{
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.box1 {
-    padding-right: 10px;
+.boxTen{
+    color: #ffbf3c;
+    font-family: Gotham-Book,Arial,serif;
+    font-size: 12px;
+    font-weight: 700;
+    width: 150px;
+
+}
+.boxTen div{
+    display: inline-block;
+    margin-right: 6px;
+}
+.boxTen p span{
+    text-decoration: underline;
+}
+.boxTen {
+    margin: auto 0 auto 2rem;
 }
 
-.box1>div {
-    width: max-content;
+.freqHolder{
+    padding-right: 6rem;
+}
+.conHolder{
+    margin: 0px 30px;
 }
 
-.per {
+.boxFive p,.boxFive li ,.boxSix p, .selectLabel {
+    word-wrap: break-word;
+    color: #fff;
+    font-family: Gotham-Book, Arial, serif;
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 7px;
+    text-transform: uppercase;
+    max-width: 275px;
+}
+.selectLabel{
+    text-transform: none;
+    margin-right: 1rem;
+}
+.label {
     appearance: none;
     background: #000;
     border: 1px solid #ffbf3c;
@@ -44,21 +113,20 @@
     outline: none;
     padding: 10px 20px;
     text-transform: uppercase;
-    width: 100%;
+    width: 90%;
     text-align: center;
+    display: block;
+    height: 100%;
+}
+.hide{
+    display: none;
+}
+.boxTwo .hide:checked + .label, .boxThree .hide:checked + .label{
+    background: #ffbf3c;
+    color: #000;
 }
 
-.boxDetails {
-    word-wrap: break-word;
-    color: #fff;
-    font-family: Gotham-Book, Arial, serif;
-    font-size: 10px;
-    font-weight: 500;
-    margin-top: 7px;
-    text-transform: uppercase;
-}
-
-.box7 select, .box6 select {
+.freqHolder select, .qtyHolder select {
     background: none;
     border: 3px solid #bbb;
     color: #fff;
@@ -69,29 +137,16 @@
     padding: 10px 30px 10px 10px;
 }
 
-.box6 {
-    grid-row-start: 3;
-    grid-column-start: 2;
-}
-.box7 {
-    grid-row-start: 3;
-    grid-column-start: 3;
-}
-.box8 {
-    grid-row-start: 4;
-    grid-column-start: 2;
-}
-
-.per p {
+.label p {
     font-size: 24px;
 }
 
-.per .ft12 {
+.label .ft12 {
     font-size: 12px;
     text-align: center;
 }
 
-.per .strike {
+.label .strike {
     text-decoration: line-through;
     font-size: 18px;
     padding-left: 10px;
@@ -128,4 +183,91 @@
 .btn:hover {
     background-color: black;
     color: #ffbf3c;
+}
+.btnContainer{
+    display: -webkit-box;
+    margin-left: 20rem;
+    margin-top: 1rem;
+}
+.boxSeven .boxTen{
+    display: none;
+}
+@media (max-width: 1440px) {
+    .boxSeven .freqHolder{
+        padding-right: 1rem;
+    }
+    .container{
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container{
+        max-width: 70%;
+    }
+    .boxOne{
+        flex: 1 0 100%;
+        display: grid;
+        place-content: center;
+    }
+    .boxHide{
+        display: grid;
+        place-items: center;
+        margin: 1em auto;
+    }
+    .boxFour{
+        display: none;
+    }
+    .boxTwo, .boxThree, .boxFive, .boxSix, .boxSeven ,.boxEight{
+        flex: 1 0 50%;
+        margin: 0.5rem 0;
+    }
+    .boxSeven{
+        display: inline-block;
+    }
+    .boxSeven .freqHolder{
+        padding: 0;
+    }
+    .btnContainer{
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .container{
+        max-width: 90%;
+    }
+    .conHolder{
+        margin: 0;
+    }
+}
+@media (max-width: 600px) {
+    .container{
+        max-width: 100%;
+    }
+    .btnContainer{
+        margin-left: 0;
+    }
+}
+@media (max-width: 520px) {
+    .qtyHolder, .freqHolder{
+        display: flex;
+        flex-direction: column;
+    }
+    .qtyHolder select, .freqHolder select{
+    width: 90%;
+    }
+}
+@media (max-width: 490px) {
+.boxNight .boxTen{
+    display: none;
+}
+.boxSeven .boxTen{
+    display: block;
+    margin: 0;
+}
+.boxSeven{
+    display: block;
+    margin: auto;
+}
 }

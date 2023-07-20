@@ -130,7 +130,7 @@
                 "src": "\\utility\\trust\\cGMP-Icon-v1-Black 1.png"
             },
             {
-                "src": "\\utility\\trust\\Clean+Pure-Icon-v1-Black-300x300 1.png"
+                "src": "\\utility\\trust\\Clean+Pure-Icon-v1-Black-300x300.png"
             },
             {
                 "src": "\\utility\\trust\\Clinically_Proven-Icon-v1-Black 1.png"
@@ -197,11 +197,38 @@
             ]
         },
         "ReasonsToBelieve": {
-            "ingredients": "https://f.shgcdn.com/b54cf21c-9b62-4925-a26d-f9f06f376de3",
+            "ingredients": {"src":"https://f.shgcdn.com/b54cf21c-9b62-4925-a26d-f9f06f376de3/"},
             "items": [
                 {
-                    "note": "lol",
-                    "expanded": "kk"
+                    "note": "title",
+                    "expanded": "desc....."
+                }
+            ]
+        },
+        "ProductSlideAccordion":{
+            "heading":"Riboflam",
+            "subHeading":"Clinically Proven Benefits",
+            "subtitle":"From Pharma-grade ingredients",
+            "items":[
+                {
+                    "title":"Exercise Pain Relief",
+                    "description":"Clinically-proven ingredients help relieve post-exercise pain naturally"
+                },
+                {
+                    "title":"Cardio Health",
+                    "description":"Clinically-proven ingredients help maintain a healthy heart and vascular system"
+                },
+                {
+                    "title":"Mental Health",
+                    "description":"Clinically-proven ingredients support cognition, mental clarity and focus"
+                },
+                {
+                    "title":"Liver Health",
+                    "description":"Clinically-proven ingredients help manage bad cholesterol levels by increasing bile production which traps cholesterol for elimination"
+                },
+                {
+                    "title":"Digestive Health",
+                    "description":"Clinically-proven ingredients reduce inflammation in the gut, improve colon health and reduce gas and bloating and balance gut flora"
                 }
             ]
         },
@@ -211,6 +238,76 @@
             "formId": "7b270a73-336b-4895-8b55-286a3f49b1f2",
             "desktopImage": "https://f.shgcdn.com/36a62ffd-6a81-42b5-a958-3bced96f32e0/",
             "mobileImage": "https://f.shgcdn.com/b9865024-9eb3-4ecc-a335-fd99718d5f5b/", "landing": true
-          }
+          },
+          "footer": {
+            "hideFooterHead":true,
+            "links": [
+                {
+                    "url": "",
+                    "title": "Company",
+                    "name": "Company",
+                    "navMenuLinks": [
+                        {
+                            "name": "Our Story",
+                            "url": "/our-story"
+                        },
+                        {
+                            "name": "Our Science",
+                            "url": "/science"
+                        },
+                        {
+                            "name": "Social Responsibility",
+                            "url": "/social-responsibility"
+                        }
+                    ]
+                },
+                {
+                    "url":"",
+                    "title":"Customer Support",
+                    "navMenuLinks":[
+                        {
+                            "name": "Contact Us",
+                            "url": "/contact-us"
+                        },
+                        {
+                            "name": "FAQs",
+                            "url": "/faqs"
+                        },
+                        {
+                            "name": "Reviews",
+                            "url": "/reviews"
+                        }
+                    ]
+                },
+                {
+                    "url": "",
+                    "title": "Others",
+                    "name": "Company",
+                    "navMenuLinks": [
+                        {
+                            "name": "Shipping Policy",
+                            "url": "/shipping-policy"
+                        },
+                        {
+                            "name": "Returns Portal",
+                            "url": "https://brunomd.returnscenter.com/"
+                        },
+                        {
+                            "name": "Return Policy",
+                            "url": "/return-and-cancellation-policy"
+                        },
+                        {
+                            "name": "Terms of Service",
+                            "url": "/terms-of-service"
+                        },
+                        {
+                            "name": "Privacy Policy",
+                            "url": "/privacy-policy"
+                        }
+                    ]
+                }
+            ],
+            "text": "<p>Statements made on this website have not been evaluated by the U.S. Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease. Information provided by this website or this company is not a substitute for individual medical advice.</p><p>© 2022 brunomd.com. All Rights Reserved</p>"
+        }
     }
 }

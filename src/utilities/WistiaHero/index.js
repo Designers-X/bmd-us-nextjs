@@ -3,7 +3,6 @@ import styles from './styles.module.css'
 import Link from 'next/link'
 import Image from 'next/image';
 export const WistiaHero = ({ id, content }) => {
-    console.log({content});
     const [windowWidth, setWindowWidth] = useState(false)
     useEffect(() => {
         setWindowWidth(window.innerWidth - 15)
@@ -24,7 +23,7 @@ export const WistiaHero = ({ id, content }) => {
                                     {content.subTitle}
                                 </div>}
                             </div>
-                            {content?.btnText && <Link href="/collezioni/tutti">
+                            {content?.btnText && <Link href={content.btnLink || '/collezioni/tutti'}>
                                 <span className={styles.btn}>{content.btnText}</span>
                             </Link>}
                         </div>

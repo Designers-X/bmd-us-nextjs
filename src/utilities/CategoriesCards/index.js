@@ -3,14 +3,14 @@ import styles from './styles.module.css'
 import Link from 'next/link'
 import Image from 'next/image';
 const Cards = ({ contents }) => {
-    if (!contents.length) return null;
+    if (!contents.items.length) return null;
     return (
         <section className={styles.container}>
             <h3 className={styles.solutionHeader}>
-                <Link href="/">Our Solutions</Link>
+                <Link href="/">{contents.title}</Link>
             </h3>
             <div className={styles.solutionsContainer}>
-                {contents.map((e, index) => {
+                {contents.items.map((e, index) => {
                     return (
                         <>
                             <div className={styles.solutionCardOuterContainer} key={index}>
@@ -23,11 +23,11 @@ const Cards = ({ contents }) => {
                                         height={326}
                                     />
                                 </Link>
-                                <div className={styles.categoryName}> <Link href={e.link}>{e.name}</Link></div>
+                                <div className={styles.categoryName} style={e.fontSize ? {fontSize:`${e.fontSize}px`}:{}}> <Link href={e.link}>{e.name}</Link></div>
                                 <div className={styles.solutionCardInnerContainer}>
                                     <div className={styles.RightCornerContainer}>
                                         <Link href={e.link}>
-                                            <button className={styles.buyNowButton}>Shop</button>
+                                            <button className={styles.buyNowButton}>{e.btnText || 'Shop'}</button>
                                         </Link>
                                     </div>
                                 </div>

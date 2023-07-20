@@ -6,9 +6,11 @@
     "run": "next dev -p 5000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "next lint --fix"
   },
   "dependencies": {
+    "@rechargeapps/storefront-client": "^1.5.0",
     "@shopify/shopify-api": "^7.2.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
